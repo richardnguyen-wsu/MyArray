@@ -26,11 +26,16 @@ int main() {
 	cout << "array2 values: " << array2.get_value(0) << " " << array2.get_value(1);
 	cout << " " << array2.get_value(2) << endl;
 
+	//To check if it was doing a shallow copy or deep copy
+	array1.set_item(1, 7);
+	cout << "array2 values after changing array1: " << array2.get_value(0) << " " << array2.get_value(1);
+	cout << " " << array2.get_value(2) << endl;
+
 	//To force the destructor to be invoke, create a dynamically allocated instance of the class.
 	MyArray* aptr = new MyArray();//a pointer to point to the dynamically allocated array object
 	aptr->add_item(8);
 	aptr->add_item(3);
-	cout << "aptr values" << aptr->get_value(0) << " " << aptr->get_value(1) << endl;
+	cout << "aptr values: " << aptr->get_value(0) << " " << aptr->get_value(1) << endl;
 	//Use assignment operator to copy aptr to array2
 	array2 = *aptr;
 	//Check to see array2 has values from aptr

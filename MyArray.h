@@ -16,6 +16,8 @@ public:
 	MyArray& operator=(const MyArray& other);//Assignment Operator
 
 	void add_item(int value);//Add item to the end of the array (for simplicity)
+	void set_item(int pos, int value);//Sets the item at a specific position, with a specific value
+
 	int get_size();//Get size
 	int get_capacity();//Get capacity
 	int get_value(int pos);//Get the value from a specific location
