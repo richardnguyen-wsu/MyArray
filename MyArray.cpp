@@ -9,21 +9,24 @@ MyArray::MyArray() {
 	
 }//Default Constructor
 MyArray::MyArray(const MyArray& other) {
+//Copy-Constructor
 //Initialize the new array to a deep copy of the other array being passed in.
 	
 	//Copy the array
 	copy_array(other);
 
 
-}//Copy-Constructor
+}
 
 MyArray::~MyArray() {
+//Destructor
 	//Delete the array
 	delete_array();	
 
-}//Destructor
+}
 
 MyArray& MyArray::operator=(const MyArray& other) {
+//Assignment Operator
 	//Check for self-assignment
 	if (this != &other) //check the address the pointer is pointing to vs the address of the other object
 	{
@@ -34,9 +37,8 @@ MyArray& MyArray::operator=(const MyArray& other) {
 		copy_array(other);
 	}
 
-
 	return *this;
-}//Assignment Operator
+}
 void MyArray::copy_array(const MyArray& other)
 {
 	//Deep copy code
