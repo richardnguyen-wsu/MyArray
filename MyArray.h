@@ -15,6 +15,10 @@ public:
 	~MyArray();//Destructor
 	MyArray& operator=(const MyArray& other);//Assignment Operator
 
+	//Helper functions
+	void copy_array(const MyArray& other);//or we can pass in the array via an int * and the size of the array instead of passing an MyArray object. Make sure to mark the parameter as const since we don't want to change the array being passed in.
+	void delete_array();
+
 	void add_item(int value);//Add item to the end of the array (for simplicity)
 	void set_item(int pos, int value);//Sets the item at a specific position, with a specific value
 

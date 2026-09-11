@@ -46,7 +46,7 @@ int main() {
 
 	//Check to see that array2 still exists
 	array2.add_item(9);
-	cout << "array2 values: " << array2.get_value(0) << " " << array2.get_value(1);
+	cout << "array2 values after deleting aptr: " << array2.get_value(0) << " " << array2.get_value(1);
 	cout << " " << array2.get_value(2) << endl;
 
 
