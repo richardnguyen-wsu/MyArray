@@ -65,6 +65,7 @@ void MyArray::delete_array()
 	capacity = 0;
 }
 void MyArray::add_item(int value) {
+	//In the quick class example, the professor didn't check to see if size == capacity, else you have to resize.
 	arr[size++] = value;//update the size after adding the value to the array	
 }
 void MyArray::set_item(int pos, int value) {
